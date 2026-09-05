@@ -1,0 +1,24 @@
+{
+  "name": "spider-web-omega-blockchain-storage",
+  "version": "1.0.0",
+  "description": "Blockchain-based cloud storage system with localhost connection, CMD live output, file upload/view, and Multi-Password Spider Web Omega encryption matrix.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "blockchain",
+    "cloud-storage",
+    "spider-web-omega",
+    "encryption",
+    "cmd-output"
+  ],
+  "author": "Antigravity AI",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "ws": "^8.17.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}

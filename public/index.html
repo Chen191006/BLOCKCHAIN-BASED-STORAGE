@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spider-Web Omega: Blockchain Cloud Storage System</title>
+
+  <!-- External Stylesheets & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Header Navigation Bar -->
+  <header>
+    <div class="brand">
+      <div class="brand-logo">
+        <i class="fas fa-spider" style="color: #040814;"></i>
+      </div>
+      <div class="brand-title">
+        <h1>SPIDER-WEB OMEGA</h1>
+        <p>DECENTRALIZED BLOCKCHAIN CLOUD STORAGE & CRYPTO MATRIX</p>
+      </div>
+    </div>
+
+    <div class="status-pills">
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span id="statStatus">SECURE</span>
+      </div>
+      <div class="pill">
+        <i class="fas fa-cubes" style="color: var(--cyan);"></i>
+        <span id="statHeight">1 Block</span>
+      </div>
+      <div class="pill">
+        <i class="fas fa-memory" style="color: var(--amber);"></i>
+        <span id="statMempool">0 Tx</span>
+      </div>
+      <div class="pill">
+        <i class="fas fa-database" style="color: var(--purple);"></i>
+        <span id="statFiles">0 Files</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Dashboard Grid -->
+  <main class="dashboard-grid">
+    
+    <!-- Left Column: Security Matrix & File Uploader -->
+    <div class="grid-column">
+      
+      <!-- Card 1: Multi-Password Spider-Web Omega Matrix -->
+      <section class="cyber-card">
+        <div class="card-title">
+          <i class="fas fa-project-diagram"></i>
+          Spider-Web Omega Multi-Password Security Matrix
+        </div>
+
+        <div class="spider-container">
+          <!-- Interactive 2D Canvas Graph -->
+          <div class="canvas-wrapper">
+            <canvas id="spiderCanvas"></canvas>
+          </div>
+
+          <!-- Multi-Password Key Matrix Inputs -->
+          <div class="spider-form">
+            <div class="input-group">
+              <label for="primaryPass"><i class="fas fa-key"></i> Primary Master Passphrase</label>
+              <input type="password" id="primaryPass" value="OmegaMasterKey2026!" placeholder="Enter Master Passphrase">
+            </div>
+            
+            <div class="input-group">
+              <label for="nodeAlpha"><i class="fas fa-shield-alt" style="color: var(--cyan);"></i> Strand Alpha Password</label>
+              <input type="password" id="nodeAlpha" value="AlphaNode99" placeholder="Node Alpha Key">
+            </div>
+
+            <div class="input-group">
+              <label for="nodeBeta"><i class="fas fa-shield-alt" style="color: var(--purple);"></i> Strand Beta Password</label>
+              <input type="password" id="nodeBeta" value="BetaNode77" placeholder="Node Beta Key">
+            </div>
+
+            <div class="input-group">
+              <label for="nodeGamma"><i class="fas fa-shield-alt" style="color: var(--green);"></i> Strand Gamma Password</label>
+              <input type="password" id="nodeGamma" value="GammaNode55" placeholder="Node Gamma Key">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card 2: File Upload Engine -->
+      <section class="cyber-card" style="margin-top: 1.5rem;">
+        <div class="card-title">
+          <i class="fas fa-cloud-upload-alt"></i>
+          Blockchain Storage Vault File Upload
+        </div>
+
+        <div class="upload-zone" id="uploadZone">
+          <i class="fas fa-file-shield upload-icon"></i>
+          <p style="font-weight: 600; color: #fff; margin-bottom: 0.3rem;">Drag & Drop File to Encrypt & Store</p>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">or click to browse local computer files</p>
+          <input type="file" id="fileInput" style="display: none;">
+        </div>
+
+        <div id="selectedFileName" style="font-size: 0.85rem; color: var(--cyan); margin-bottom: 1rem; text-align: center; font-family: var(--font-mono);">
+          No file selected
+        </div>
+
+        <button class="btn-cyber" id="uploadBtn" disabled>
+          <i class="fas fa-lock"></i> Encrypt & Store on Blockchain
+        </button>
+      </section>
+
+    </div>
+
+    <!-- Right Column: File Vault & Live CMD Output -->
+    <div class="grid-column">
+
+      <!-- Card 3: Stored Files Vault -->
+      <section class="cyber-card" style="margin-bottom: 1.5rem;">
+        <div class="card-title">
+          <i class="fas fa-vault"></i>
+          Encrypted Blockchain Vault Files
+        </div>
+
+        <div class="file-list" id="fileVaultList">
+          <div style="text-align: center; color: var(--text-muted); padding: 2rem 1rem;">
+            <i class="fas fa-spinner fa-spin" style="font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+            <p>Loading files from Blockchain ledger...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card 4: Integrated Live CMD Terminal -->
+      <section class="terminal-card">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="terminal-title">CMD Terminal Output - Localhost WebSocket Node</div>
+          <div style="font-size: 0.75rem; color: var(--green);">● LIVE</div>
+        </div>
+
+        <div class="terminal-body" id="terminalBody">
+          <div class="terminal-line" style="color: var(--cyan);">=== INITIALIZING LOCALHOST CMD STREAM ===</div>
+        </div>
+
+        <div class="terminal-input-row">
+          <span class="prompt">omega-chain&gt;</span>
+          <input type="text" id="cmdInput" class="cmd-input" placeholder="Type command (e.g. 'help', 'status', 'chain', 'mine', 'verify')..." autocomplete="off">
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- File Viewing Modal Overlay -->
+  <div class="modal-overlay" id="fileModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalTitle">🔓 Decrypting File Preview</h3>
+        <button class="btn-close" id="closeModalBtn">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Content dynamically injected by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/spider-web.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
