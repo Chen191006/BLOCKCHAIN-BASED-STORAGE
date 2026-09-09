@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --bg-primary: #070913;
-  --bg-secondary: #0d1127;
-  --bg-card: rgba(18, 24, 48, 0.7);
-  --bg-terminal: #07090e;
-  --border-color: rgba(0, 243, 255, 0.18);
-  --border-glow: rgba(0, 243, 255, 0.5);
-  
-  --cyan: #00ff9d;
-  --purple: #9d4edd;
-  --magenta: #ff007f;
-  --green: #00ff66;
-  --amber: #ffb703;
-  --text-main: #f0f4f8;
-  --text-muted: #8899ac;
+  --bg-primary: #F5F5F5;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-terminal: #F8FAFC;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-glow: rgba(37, 99, 235, 0.2);
+
+  --cyan: #2563EB;
+  --purple: #7C3AED;
+  --magenta: #EC4899;
+  --green: #16A34A;
+  --amber: #F59E0B;
+
+  --text-main: #333333;
+  --text-muted: #6B7280;
 
   --font-main: 'Outfit', sans-serif;
   --font-mono: 'Fira Code', monospace;
@@ -27,16 +28,14 @@
 }
 
 body {
-  background-color: var(--bg-primary);
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(157, 78, 221, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(0, 243, 255, 0.12) 0%, transparent 40%),
-    linear-gradient(to bottom, #070913, #0d1127);
-  color: var(--text-main);
+  body {
+  background: #F5F5F5;
+  color: #333333;
   font-family: var(--font-main);
   min-height: 100vh;
   padding: 1.5rem;
   overflow-x: hidden;
+};
 }
 
 /* Header Navbar */
