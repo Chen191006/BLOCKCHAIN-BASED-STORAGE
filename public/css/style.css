@@ -14,8 +14,8 @@
   --magenta: #55555c;
   --green: #2e7d32;
   --amber: #b8860b;
-  --text-main: #1c1c22;
-  --text-muted: #7a7a85;
+  --text-main: #111827;
+  --text-muted: #4b5563;
 
   --font-main: 'Outfit', sans-serif;
   --font-mono: 'Fira Code', monospace;
@@ -70,11 +70,10 @@ header {
 
 .brand-title h1 {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 1px;
-  background: linear-gradient(90deg, #fff, var(--cyan));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #1f2937;
+ 
 }
 
 .brand-title p {
@@ -146,13 +145,13 @@ header {
 
 .card-title {
   font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: #1f2937;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(43, 43, 49, 0.12);
   padding-bottom: 0.75rem;
 }
 
@@ -206,8 +205,8 @@ header {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--text-muted);
-  font-weight: 600;
+  color: #4b5563;
+  font-weight: 700;
 }
 
 .input-group input {
@@ -319,9 +318,9 @@ header {
 }
 
 .file-name {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.9rem;
-  color: #fff;
+  color: #1f2937;
 }
 
 .file-meta {
